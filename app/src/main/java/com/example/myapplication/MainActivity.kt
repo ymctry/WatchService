@@ -1,15 +1,23 @@
 package com.example.myapplication
 
 import android.app.Activity
+import android.bluetooth.BluetoothAdapter
+import android.bluetooth.BluetoothManager
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import com.example.myapplication.databinding.ActivityMainBinding
 import java.util.*
 
+
 class MainActivity : Activity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    private var mBleAdapter: BluetoothAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,5 +39,8 @@ class MainActivity : Activity() {
                 Log.d("auto_xxx","MainActivity 2秒执行一次")
             }
         }, 0,2000)*/
+
     }
+
+
 }
